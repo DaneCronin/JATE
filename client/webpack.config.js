@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
 module.exports = () => {
@@ -11,6 +13,7 @@ module.exports = () => {
     entry: {
       main: "./src/js/index.js",
       install: "./src/js/install.js",
+      // editor: "./src/js/editor.js"
     },
     output: {
       filename: "[name].bundle.js",
@@ -21,10 +24,15 @@ module.exports = () => {
         template: "./index.html",
         title: "JATE",
       }),
+      new InjectManifest({
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
+      }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
         name: "JATE",
+        short_name: 'JATE',
         description: "Just another text editor",
         background_color: "#225CA3",
         theme_color: "#225CA3",
@@ -38,10 +46,7 @@ module.exports = () => {
           },
         ],
       }),
-      new InjectManifest({
-        swSrc: "./src-sw.js",
-        swDest: "src-sw.js",
-      }),
+   
     ],
     module: {
       rules: [
