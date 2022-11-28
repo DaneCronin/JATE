@@ -22,7 +22,9 @@
   ## Usage
   *Instructions and examples for use:*
 
-  This is a deployed application, so the user will just need to open the link in browser to utilize the web app
+  This is a deployed application, so the user will just need to open the link in browser to utilize the web app,
+  
+  https://intense-spire-60256.herokuapp.com
 
   ## Contributing
   *Please follow these guidelines if you would like to contribute:*
