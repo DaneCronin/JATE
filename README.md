@@ -22,9 +22,11 @@
   ## Usage
   *Instructions and examples for use:*
 
-  This is a deployed application, so the user will just need to open the link in browser to utilize the web app,
+  This is a deployed application, you may view it [HERE](https://intense-spire-60256.herokuapp.com).
   
-  https://intense-spire-60256.herokuapp.com
+  
+![JATE](https://user-images.githubusercontent.com/107944830/206869679-ff993842-b864-475e-8814-74337b788272.png)
+
 
   ## Contributing
   *Please follow these guidelines if you would like to contribute:*
